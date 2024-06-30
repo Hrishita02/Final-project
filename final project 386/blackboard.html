@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFV Blackboard Learn</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #2c3e50;
+            color: white;
+            width: 300px;
+            height: 100vh;
+            padding: 10px; /* Reduced padding */
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            border-right: 2px solid #ccc;
+        }
+        .sidebar img {
+            width: 150px; /* Adjusted width */
+            margin-bottom: 20px;
+        }
+        .sidebar h1 {
+            font-size: 1.5em; /* Adjusted font size */
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .sidebar input[type="text"] {
+            width: 90%; /* Adjusted width */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Adjusted padding */
+            margin: 5px 0; /* Adjusted margin */
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            width: 90%; /* Adjusted width */
+            font-size: 1em; /* Adjusted font size */
+            background-color: #34495e;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #f39c12;
+            transform: scale(1.05);
+        }
+        .sidebar a img, .sidebar a .emoji {
+            width: 20px; /* Adjusted width */
+            height: 20px; /* Adjusted height */
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 320px;
+            padding: 20px;
+            width: calc(100% - 340px);
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .section a {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .section a:hover {
+            background-color: #f39c12;
+            transform: scale(1.05);
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 20px;
+            width: 90%; /* Adjusted width */
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjusted gap */
+            margin-top: 10px;
+        }
+        .social-media a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        .social-media img {
+            width: 20px; /* Adjusted width */
+            height: 20px; /* Adjusted height */
+        }
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .footer {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="https://imgur.com/WLXEQDS.jpeg" alt="UFV Logo"> 
+            <h1>UFV Blackboard Learn</h1>
+            <input type="text" placeholder="Search...">
+            <a href="#student-account"><span class="emoji">🧑‍🎓</span> My Account</a>
+            <a href="#courses"><span class="emoji">📚</span> My Courses</a>
+            <a href="#announcements"><span class="emoji">📰</span> Announcements</a>
+            <a href="#grades"><span class="emoji">📊</span> Grades</a>
+            <a href="#messages"><span class="emoji">✉️</span> Messages</a>
+            <a href="#resources"><span class="emoji">🗂️</span> Student Resources</a>
+            <a href="#calendar"><span class="emoji">🗓️</span> Calendar</a>
+            <a href="#clubs"><span class="emoji">🎨</span> Clubs & Activities</a>
+            <a href="#support"><span class="emoji">🆘</span> Support</a>
+            <a href="#sign-out"><span class="emoji">⬅️</span> Sign out</a>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 University of the Fraser Valley</p>
+            <p>33844 King Road, Abbotsford, BC V2S 7M8, Canada</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/UFV/"><img src="https://imgur.com/KNjyAUw.jpeg" alt="Facebook"></a> <!
+                <a href="https://twitter.com/UFV/"><img src="https://imgur.com/tjTgjQr.jpeg" alt="Twitter"></a> 
+                <a href="https://www.instagram.com/ufvcanada/"><img src="https://imgur.com/ptN3jl3.jpeg" alt="Instagram"></a> <
+                <a href="https://www.linkedin.com/school/university-of-the-fraser-valley/"><img src="https://imgur.com/m7Cw0mF.jpeg" alt="LinkedIn"></a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="welcome" class="section">
+            <img src="https://imgur.com/IcYJVf8.jpeg" alt="Welcome Image"> 
+            <h2>Welcome to UFV Blackboard Learn</h2>
+            <p>🥳Welcome to the University of the Fraser Valley's Blackboard Learn portal. Here you can access your courses, stay updated with the latest news, and find resources to support your academic journey. We're excited to have you here!</p>
+        </div>
+        <div id="events" class="section">
+            <img src="https://imgur.com/Xb5CTPe.jpeg" alt="Events Image"> 
+            <h2>Upcoming Events</h2>
+            <p>🎪Check out the exciting events happening on campus this semester. From guest lectures to student workshops, there's something for everyone. Don't miss out!</p>
+            <a href="https://www.ufv.ca/events/">View All Events</a>
+        </div>
+        <div id="testimonials" class="section">
+            <img src="https://imgur.com/rePLYfw.jpeg" alt="Student Testimonials Image"> <!-- Replace with your Imgur link -->
+            <h2>Student Testimonials</h2>
+            <p>Hear🧑‍🎓 from fellow students about their experiences at UFV. Get tips, advice, and inspiration from those who have been in your shoes.</p>
+            <a href="https://www.ufv.ca/testimonials/">Read Testimonials</a>
+        </div>
+        <div id="career-services" class="section">
+            <img src="https://imgur.com/PUNqlrO.jpeg" alt="Career Services Image"> <!-- Replace with your Imgur link -->
+            <h2>Career Services</h2>
+            <p>🧑‍💻Prepare for your future career with our career services. Get help with resume building, job searches, internships, and more.</p>
+            <a href="https://www.ufv.ca/career-services/">Explore Career Services</a>
+        </div>
+    </div>
+</body>
+</html>
